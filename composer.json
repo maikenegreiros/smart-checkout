@@ -1,0 +1,19 @@
+{
+    "name": "maike/smart-checkout",
+    "description": "Um wrapper dos principais gateways de pagamentos",
+    "authors": [
+        {
+            "name": "Maike Negreiros",
+            "email": "maike_jbe@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SmartCheckout\\": "src"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "license": "MIT"
+}
