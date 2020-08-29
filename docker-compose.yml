@@ -1,0 +1,25 @@
+version: '3'
+services:
+  build:
+      image: 'composer:latest'
+      working_dir: '/app'
+      volumes:
+        - .:/app
+      command: composer install
+  app:
+    image: 'php:7.4-apache'
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - '8080:80'
+    depends_on:
+      - build
+  tests:
+    image: 'php:7.4-alpine'
+    working_dir: '/app'
+    volumes:
+      - .:/app
+    command: ./vendor/bin/phpunit tests
+    depends_on:
+      - build
