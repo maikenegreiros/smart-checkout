@@ -1,10 +1,10 @@
 <?php
-namespace SmartCheckout\Sales\ValueObjects;
+namespace SmartCheckout\Orders\ValueObjects;
 
 class Item {
-  private float $price;
-  private int $quantity;
-  private string $name;
+  public float $price;
+  public int $quantity;
+  public string $name;
 
   public function __construct(float $price, int $quantity, string $name)
   {
